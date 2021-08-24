@@ -16,6 +16,9 @@ function verifyJWT(req, res, next) {
         next();
     })
 }
+routes.get('/', (req, res) => {
+    res.json({message: "Tudo ok por aqui!"});
+})
 
 //Rota Annotations
 routes.post('/annotations', verifyJWT, AnnotationController.create);
