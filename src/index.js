@@ -1,6 +1,8 @@
 const express = require('express');
 const routes = require('./routes');
 const cors = require('cors');
+global.expiresIn = 300;
+global.secret = 'wilsontools';
 
 const app = express();
 require('./config/db');
